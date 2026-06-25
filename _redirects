@@ -1,0 +1,2 @@
+# Redirect www to apex
+https://www.iscarcreations.com/* https://iscarcreations.com/:splat 301
