@@ -59,3 +59,10 @@ syncing to Google Drive -- which is exactly why this repo now lives in
 - [ ] Real product photos for the gallery.
 - [ ] Cloudflare dashboard: create the Worker + Workers Builds connection, remove the
       old Pages project, connect `iscarcreations.com`. (See parent project handoff.)
+
+## www -> apex redirect (set up 2026-07-17)
+Handled by a zone-level Cloudflare Redirect Rule ("Redirect from WWW to root"
+template: match `https://www.*` -> `https://${1}` 301), plus a proxied CNAME
+`www -> iscarcreations.com`. NOT via `_redirects` -- Workers static assets only
+allows relative paths there. Confirmed working: https://www.iscarcreations.com/
+301s to https://iscarcreations.com/.
