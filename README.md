@@ -1,24 +1,28 @@
 # ISCar Creations Website
 
-Static site for [iscarcreations.com](https://iscarcreations.com) — deployed via Cloudflare Pages.
+Static site for [iscarcreations.com](https://iscarcreations.com) — served by a
+Cloudflare **Worker** (static assets). See `DEPLOY.md` for the full workflow.
 
 ## Stack
 
 - Plain HTML/CSS — no build step required
-- Fonts: Space Grotesk + Inter via Google Fonts
+- Font: Jost via Google Fonts
 - Contact form: Formspree (replace `PLACEHOLDER` in form action with real form ID)
 
 ## Deploy
 
-This repo connects directly to Cloudflare Pages.
+Cloudflare **Workers** (static assets) via Workers Builds — push to `main`
+auto-deploys. Config lives in `wrangler.jsonc`; `.assetsignore` keeps `.git/` and
+internal docs from being served. Full details and gotchas: `DEPLOY.md`.
 
-- **Build command:** *(none — static)*
-- **Output directory:** `/` (root)
+- **Worker name:** `iscar-creations-website`
+- **Deploy command:** `npx wrangler deploy` (no build step)
 - **Branch:** `main`
 
 ## Domain
 
-`iscarcreations.com` — connect in Cloudflare Pages → Custom Domains after deploying.
+`iscarcreations.com` — connect in Cloudflare dashboard (Workers & Pages →
+`iscar-creations-website` → Custom Domains).
 
 ## To-do before launch
 

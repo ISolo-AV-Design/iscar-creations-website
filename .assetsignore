@@ -1,0 +1,12 @@
+.git
+.git/**
+.wrangler
+.wrangler/**
+node_modules
+node_modules/**
+.DS_Store
+
+# Internal docs/config -- not part of the actual site, shouldn't be publicly served
+DEPLOY.md
+wrangler.jsonc
+README.md
