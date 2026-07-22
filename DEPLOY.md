@@ -52,13 +52,14 @@ Manager (prompted on first push). A token was once leaked here via `.git/config`
 syncing to Google Drive -- which is exactly why this repo now lives in
 `C:\Users\ivanc\Documents\Hermes Projects\`, not in Drive.
 
-## Pre-launch to-do (still open)
-- [ ] Replace Formspree placeholder id in `index.html`.
-- [ ] Confirm contact email (`hello@iscarcreations.com`).
-- [ ] Add finalized logo asset + favicon.
+## Pre-launch to-do
+- [x] Replace Formspree placeholder id in `index.html` (now `/f/mvzeapqw`; confirmed working 2026-07-21).
+- [x] Add favicon (favicon.svg, favicon.ico, apple-touch-icon.png from the gradient mark).
+- [x] Cloudflare dashboard: Worker + Workers Builds connection created, old Pages project
+      removed, `iscarcreations.com` connected.
+- [ ] Confirm contact email (`hello@iscarcreations.com`) actually receives mail.
+- [ ] Add a finalized standalone logo image file (favicon mark exists; full logo asset pending).
 - [ ] Real product photos for the gallery.
-- [ ] Cloudflare dashboard: create the Worker + Workers Builds connection, remove the
-      old Pages project, connect `iscarcreations.com`. (See parent project handoff.)
 
 ## www -> apex redirect (set up 2026-07-17)
 Handled by a zone-level Cloudflare Redirect Rule ("Redirect from WWW to root"

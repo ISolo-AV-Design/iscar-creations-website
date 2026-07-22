@@ -7,7 +7,7 @@ Cloudflare **Worker** (static assets). See `DEPLOY.md` for the full workflow.
 
 - Plain HTML/CSS — no build step required
 - Font: Jost via Google Fonts
-- Contact form: Formspree (replace `PLACEHOLDER` in form action with real form ID)
+- Contact form: Formspree (endpoint `/f/mvzeapqw`, live and confirmed working)
 
 ## Deploy
 
@@ -26,8 +26,9 @@ internal docs from being served. Full details and gotchas: `DEPLOY.md`.
 
 ## To-do before launch
 
-- [ ] Replace Formspree placeholder ID in `index.html` form action
-- [ ] Add real contact email (`hello@iscarcreations.com` or update to preferred address)
+- [x] Wire the contact form to the real Formspree endpoint (`/f/mvzeapqw`) — done, confirmed working
+- [x] Add favicon set from the gradient logo mark — done (favicon.svg, favicon.ico, apple-touch-icon.png)
+- [x] Connect `iscarcreations.com` domain to the Worker (Workers & Pages → `iscar-creations-website` → Custom Domains) — done
+- [ ] Confirm `hello@iscarcreations.com` receives mail (advertised on the site + used for form replies)
 - [ ] Replace gallery placeholder cards with real product photos
-- [ ] Add logo/brand asset once finalized
-- [ ] Connect `iscarcreations.com` domain in Cloudflare Pages
+- [ ] Add a finalized standalone logo image file once available
